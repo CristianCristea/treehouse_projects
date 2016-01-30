@@ -4,108 +4,130 @@
     <meta charset="UTF-8">
     <title>Cristian Cristea Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <header>
-      <h1 id="home">Cristian Cristea</h1>
-    
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="container"> 
+        <h1 id="home">Cristian Cristea</h1>
+      
+        <nav class="nav-primary">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+      </div><!-- end container --> 
     </header>
 
     <main>
-      <section class="about-me">
-        <img src="img/responsive-layout-profile.png" alt="Cristian Cristea">
-        <p class="lead">
-          Hi! I'm a front-end developer who loves responsive design and css. I recently finished learning front-end web development at Treehouse and am excited to put all my skills to use!
-        </p>    
-      </section>
+      <div class="container">
+        <section class="about-me">
+          <img src="img/me.jpg" alt="Cristian Cristea">
+          <p class="lead">
+            Hi! I'm a front-end developer who loves responsive design and css. I recently finished learning front-end web development at Treehouse and am excited to put all my skills to use!
+          </p>    
+        </section>
 
-      <section class="portfolio">
-        <h2>Portfolio</h2>
+        <section class="portfolio">
+          <h3 class="section-heading">Portfolio</h3>
+
+          <div class="project marketing">
+            <a href="marketing-page.html">
+              <img src="img/portfolio-1.png" alt="project 1">
+              <h2 class="project-heading">Marketing Page</h2>
+              <p>
+                This project shows the front page of a marketing website meant for a specific business I'm interested in.
+              </p>
+            </a>
+          </div>
+         
+
+            <div class="project calculator">
+              <a href="calculator-page.html">
+                <img src="img/portfolio-4.png" alt="project calculator">
+                <h2 class="project-heading">Calculator</h2>
+                <p>
+                  Someone can enter in the numbers they want and press the big blue button and get the result.
+                </p>
+              </div>
+          </a>
+
+          <div class="project photo-gallery">
+            <a href="photo-gallery.html">
+              <img src="img/portfolio-5.png" alt="project photo gallery">
+              <h2 class="project-heading">Photo Gallery</h2>
+              <p>
+                This project shows pictures from a recent trip to the viewer and alows them to easily navigate through photos.
+              </p>
+            </a>
+          </div>
         
-        <a href="marketing-page.html">
-          <div class="project">
-            <img src="img/portfolio-1.png" alt="project 1">
-            <h2>Marketing Page</h2>
-            <p>
-              This project shows the front page of a marketing website meant for a specific business I'm interested in.
-            </p>
-          </div>
-        </a>
 
-        <a href="calculator-page.html">
-          <div class="project">
-            <img src="img/portfolio-6.png" alt="project calculator">
-            <h2>Calculator</h2>
-            <p>
-              Someone can enter in the numbers they want and press the big blue button and get the result.
-            </p>
+          <div class="project favorite-spots">
+            <a href="favorite-spots-page.html">
+              <img src="img/portfolio-6.png" alt="project map of favorite spots page">
+              <h2 class="project-heading">Map of Favorite Spots</h2>
+              <p>
+                This project uses mapping apis plot points for my favorite spots in the city for a do it yourself walking tour.
+              </p>
+            </a>
           </div>
-        </a>
+        
 
-        <a href="photo-gallery.html">
-          <div class="project">
-            <img src="img/portfolio-5.png" alt="project photo gallery">
-            <h2>Photo Gallery</h2>
-            <p>
-              This project shows pictures from a recent trip to the viewer and alows them to easily navigate through photos.
-            </p>
+          <div class="project search">
+            <a href="search-page.html">
+              <img src="img/portfolio-2.png" alt="project 2">
+              <h2 class="project-heading">Search Page</h2>
+              <p>
+                This project searches through a specific database to find information that the user is trying to look up.
+              </p>
+            </a>
           </div>
-        </a>
+        
 
-        <a href="favorite-spots-page.html">
-          <div class="project">
-            <img src="img/portfolio-4.png" alt="project map of favorite spots page">
-            <h2>Map of Favorite Spots</h2>
-            <p>
-              This project uses mapping apis plot points for my favorite spots in the city for a do it yourself walking tour.
-            </p>
+          <div class="project travel-app">
+            <a href="travel-app.html">
+              <img src="img/portfolio-3.png" alt="project travel app">
+              <h2 class="project-heading">Travel App</h2>
+              <p>
+                This project compares travel times based on different transportation methods and tells the best one.
+              </p>
+            </a>
           </div>
-        </a>
+          
+        </section>
 
-        <a href="search-page.html">
-          <div class="project">
-            <img src="img/portfolio-2.png" alt="project 2">
-            <h2>Search Page</h2>
-            <p>
-              This project searches through a specific database to find information that the user is trying to look up.
-            </p>
-          </div>
-        </a>
-
-        <a href="travel-app.html">
-          <div class="project">
-            <img src="img/portfolio-3.png" alt="project travel app">
-            <h2>Travel App</h2>
-            <p>
-              This project compares travel times based on different transportation methods and tells the best one.
-            </p>
-          </div>
-        </a>
-      </section>
-
-      <section class="contact">
-      <h2>Contact</h2>
-        <p class="lead">
-          If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!
-        </p>
-        <address>
-          Phone <span class="bold">+1 (111) 555-1234</span><br>
-          Email <span class="bold"><a href="mailto:webmaster@example.com">email@yoursite.com</a></span>
-        </address>
-      </section>
+        <section class="contact">
+        <h3 class="section-heading">Contact</h3>
+          <p class="lead">
+            If you're interested in chatting or want more information about what I've been working on, I'd love to hear from you!
+          </p>
+          <address>
+            Phone <span class="bold">+1 (111) 555-1234</span><br>
+            Email <span class="bold"><a href="mailto:webmaster@example.com">email@yoursite.com</a></span>
+          </address>
+        </section>
+      </div><!--  end container -->
     </main>
 
     <footer>
-      
+      <div class="container"> 
+        <h3 class="section-heading">Cristian Cristea</h3>
+        <a href="#home" class="back-to-top">Back to top</a>
+        <nav class="nav-secondary">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+      </div><!-- end container -->
     </footer>
 
 

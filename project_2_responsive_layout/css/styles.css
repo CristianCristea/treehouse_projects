@@ -1,6 +1,10 @@
 /*********************************************
 ***** General
 *********************************************/
+* {
+  box-sizing: border-box;
+}
+
 
 .left {
   float: left;
@@ -10,6 +14,80 @@
   float: right;
 }
 
+img {
+  width: 100%;
+}
+
+
+/*********************************************
+***** Responsive
+*********************************************/
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+/*********************************************
+***** Header, Nav
+*********************************************/
+
+header {
+  text-align: center;
+  background-color: #fafafa;
+}
+
+header h1 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  font-size: 3em;
+  letter-spacing: -1px;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+nav a {
+ text-decoration: none;
+ color: #000;
+ font-size: 1.4em;
+ font-weight: 900;
+ padding: 10px 50px;
+ display: inline-block;
+ text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #36acd0;
+}
+
+
+.nav-primary {
+  margin-bottom: 3em;
+  padding-bottom: 2em;
+}
+
+.nav-secondary,
+.nav-secondary ul,
+.nav-secondary li,
+.nav-secondary a {
+  display: inline-block;
+}
+
+.nav-secondary a {
+  font-size: 1em;
+  font-weight: 900;
+  padding: 0 0 0 30px;
+}
 
 /*********************************************
 ***** Typo
@@ -21,4 +99,182 @@ body {
 
 .bold{
   font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6,
+nav a {
+  color: #4a4a4a;
+}
+
+.section-heading {
+  font-size: 1.4em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.project-heading {
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+p {
+  color: #4a4a4a;
+  font-size: 1.4em;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+p.lead {
+  color: #7f7f7f;
+}
+
+/*********************************************
+***** Section about-me
+*********************************************/
+
+.about-me {
+  background-color: #fafafa;
+  text-align: center;
+  padding-bottom: 3em;
+}
+
+.about-me img {
+  border-radius: 5px;
+}
+
+
+/*********************************************
+***** Section portfolio
+*********************************************/
+
+.portfolio {
+  text-align: center;
+}
+
+.portfolio .section-heading {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.portfolio .project-heading {
+  padding-top: 0;
+}
+
+.portfolio a{
+  display: inline-block;
+  text-decoration: none;
+  border: 3px solid transparent;
+  padding: 10px;
+  margin-bottom: 3em;
+}
+
+
+/* hover */
+
+.project.marketing a:hover,
+.project.marketing a:focus {
+  border-color: #36acd0;
+}
+
+.project.calculator a:hover,
+.project.calculator a:focus {
+  border-color: #626f7e;
+}
+
+.project.photo-gallery a:hover,
+.project.photo-gallery a:focus {
+  border-color: #675a85;
+}
+
+.project.favorite-spots a:hover,
+.project.favorite-spots a:focus {
+  border-color: #52bab4;
+}
+
+.project.search a:hover,
+.project.search a:focus {
+  border-color: #e0ab26;
+}
+
+.project.travel-app a:hover,
+.project.travel-app a:focus {
+  border-color: #2472aa;
+}
+
+/*********************************************
+***** Section contact
+*********************************************/
+
+.contact {
+  text-align: center;
+  background-color: #fafafa;
+  border-bottom: 1px solid #7f7f7f;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+/*********************************************
+***** Footer
+*********************************************/
+
+footer {
+  background-color: #fafafa;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+footer .nav-secondary {
+  display: none;
+}
+
+address,
+.back-to-top {
+  color: #7f7f7f;
+  font-size: 1.4em;
+  font-weight: 300;
+  line-height: 1.4;
+  font-style: normal;
+}
+
+address span {
+  font-weight: 700;
+  padding-left: 1em;
+}
+
+address span a {
+  text-decoration: none;
+  color: #7f7f7f;
+}
+
+address span a:hover {
+  text-decoration: none;
+  color: #7f7f7f;
+}
+
+footer .section-heading {
+  font-size: 1.2em;
+  margin: 0;
+  display: inline-block;
+}
+
+footer .container{
+  position: relative;
+
+}
+
+a.back-to-top {
+  text-decoration: none;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 900;
+  letter-spacing: -1px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -0.6em;
+}
+
+.back-to-top:hover{
+  text-decoration: none;
 }
