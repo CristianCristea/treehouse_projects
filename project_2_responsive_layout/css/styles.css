@@ -4,30 +4,28 @@
 * {
   box-sizing: border-box;
 }
-
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
+.border-bottom {
+  border-bottom: 1px solid #7f7f7f;
 }
 
 img {
   width: 100%;
 }
 
-
-/*********************************************
-***** Responsive
-*********************************************/
-
 .container {
   width: 90%;
   margin: 0 auto;
 }
 
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
 
 /*********************************************
 ***** Header, Nav
@@ -119,7 +117,7 @@ nav a {
 
 p {
   color: #4a4a4a;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: 300;
   line-height: 1.4;
 }
@@ -208,9 +206,7 @@ p.lead {
 .contact {
   text-align: center;
   background-color: #fafafa;
-  border-bottom: 1px solid #7f7f7f;
   padding-top: 4em;
-  padding-bottom: 4em;
 }
 
 /*********************************************
@@ -225,6 +221,10 @@ footer {
 
 footer .nav-secondary {
   display: none;
+}
+
+address {
+  padding-bottom: 4em;
 }
 
 address,
@@ -277,4 +277,142 @@ a.back-to-top {
 
 .back-to-top:hover{
   text-decoration: none;
+}
+
+/*********************************************
+***** Project Single Page
+*********************************************/
+
+.project-single,
+.project-details {
+  text-align: center;
+}
+
+.project-single .project-heading {
+  padding-top: 2em;
+}
+
+/*********************************************
+***** Tablet
+*********************************************/
+
+@media screen and (min-width: 769px) {
+
+  /*********************************************
+  ***** Header, Nav
+  *********************************************/
+
+  .nav-primary li{
+    display: inline-block;
+    background-color: #fafafa;
+  }
+
+  .nav-primary a {
+    padding: 0 30px;
+  }
+
+  .nav-primary {
+    margin-bottom: 0;
+    padding-bottom: 100px;
+  }
+
+  /*********************************************
+  ***** Section about-me
+  *********************************************/
+
+  .about-me p {
+    width: 60%;
+    float: left;
+    vertical-align: middle;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .about-me img {
+    width: 40%;
+    float: right;
+  }
+
+
+  /*********************************************
+  ***** Section portfolio
+  *********************************************/
+
+  .portfolio .project {
+    width: 50%;
+    float: left;
+  }
+
+  /*********************************************
+  ***** Project Single Page
+  *********************************************/
+
+  .project-details.primary p,
+  .project-details.secondary img {
+    float: right;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .project-details.primary img,
+  .project-details.secondary p {
+    float: left;
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+  } 
+
+  .project-details.primary {
+    padding-top: 4em;
+    margin-bottom: 4em;
+  }
+
+  .project-details.secondary {
+    margin-bottom: 4em;
+  }
+
+
+  /*********************************************
+  ***** Footer
+  *********************************************/
+  
+  footer .nav-secondary{
+    display: inline-block;
+    float: right;
+  }
+
+  footer .section-heading {
+    vertical-align: bottom;
+  }
+
+  footer ul {
+    margin: -6px 0 0 0;
+  }
+
+  a.back-to-top {
+    display: none;
+  }
+
+}
+
+/*********************************************
+***** Desktop
+*********************************************/
+
+@media screen and (min-width: 1025px) {
+
+  .container{
+    width: 80%;
+    max-width: 1120px;
+  }
+
+  /*********************************************
+  ***** Section portfolio
+  *********************************************/
+
+  .portfolio .project {
+    width: 33%;
+    float: left;
+  }
+
 }
