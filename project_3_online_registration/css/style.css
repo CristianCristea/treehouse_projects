@@ -1,0 +1,318 @@
+/*********************************************
+***** Base
+*********************************************/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.border-top {
+  border-top: 2px solid #2d3945;
+}
+
+/*********************************************
+***** Typo
+*********************************************/
+body {
+  font-family: "Merriweather", serif;
+}
+
+.headline {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.6;
+  padding: 1em 0 1em 0;
+}
+
+.lead {
+  color: #bec2c5;
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.small {
+  font-size: .8em;
+  font-weight: 300;
+}
+
+.primary-title {
+  color: #2d3945;
+  font-size: 1.75em;
+  font-weight: 700;
+}
+
+p {
+  color: #2d3945;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/*********************************************
+***** Header
+*********************************************/
+
+.top-bar {
+  background-color: #2d3945;
+}
+
+header .primary-title {
+  padding-top: 1.25em;
+  margin-bottom: 0;
+}
+
+header .lead {
+  margin-top: .75em;
+}
+
+header .container {
+  border-bottom: 5px solid #2d3945;
+}
+
+
+/*********************************************
+***** Main
+*********************************************/
+
+main .border-top {
+  margin-top: .25em;
+}
+
+input {
+  text-align: right;
+  font-size: 1em;
+  font-style: italic;
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 1.25em;
+  border: none;
+  color: #593e4e;
+  background-color: #eff0f1;
+  border-radius: 5px;
+  font-weight: 300;
+  appearance: none;
+}
+
+label {
+  display: block;
+  color: #4ebbb5;
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 1.25em;
+  padding-bottom: .5em;
+  cursor: pointer;
+}
+
+select {
+  color: #a8adb2;
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 1.6;
+  border: none;
+}
+
+select:focus {
+  outline: 2px solid #4ebbb5;
+}
+
+input:focus {
+  background-color: #4ebbb5;
+  color: #fff;
+  transition: all .4s ease;
+}
+
+fieldset {
+  border: none;
+  margin-top: 2em;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  /*display: inline-block;*/
+  position: absolute;
+  left: -9999px;
+}
+
+input[name="zip_code"] {
+  width: 50%;
+}
+
+/* radio input */
+
+.radio {
+  position: relative;
+}
+
+.side-label {
+  display: block;
+  position: relative;
+  margin: 10px 0;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.side-label::before,
+.side-label::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+
+input[type="radio"] + .side-label::before,
+input[type="radio"] + .side-label::after {
+  border-radius: 50%;
+}
+
+.side-label::before{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4ebbb5;
+}
+
+input:focus + side-label::before {
+  border-color: #4ebbb5
+}
+
+.side-label::after {
+  display: none;
+  width: 12px;
+  height: 12px;
+  margin: 4px;
+  background-color: #4ebbb5;
+}
+
+input:checked + .side-label::after {
+  display: block;
+}
+
+/* checkbox input */
+
+.checkbox {
+  position: relative;
+}
+
+input[type="checkbox"] + label::before {
+  content: '\f096'; /* square outline*/
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  font: 1.5em 'FontAwesome';
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: '\f14a'; /* square checkmark */
+}
+
+input[type="checkbox"] + label {
+  padding-left: 2em;
+}
+
+/* text area */
+
+textarea {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+textarea:focus {
+  outline: 3px solid #4ebbb5;
+}
+/*********************************************
+***** Hide spinners in input type number
+*********************************************/
+
+input:focus::-moz-placeholder {
+  color: #fff;
+}
+input:focus::-webkit-input-placeholder {
+ color: #fff;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+
+/*********************************************
+***** Button
+*********************************************/
+
+input[type="submit"] {
+  width: 100%;
+  color: #fff;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+  background-color: #4ebbb5;
+  padding: 1em;
+  margin: 3em 0 1em 0;
+  border: none;
+  border-radius: 5px;
+}
+
+/*********************************************
+***** Footer
+*********************************************/
+
+footer {
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+/*********************************************
+***** Tablet
+*********************************************/
+
+@media screen and (min-width: 769px) {
+  .container {
+    width: 80%;
+  }
+}
+
+
+/*********************************************
+***** Desktop
+*********************************************/
+
+@media screen and (min-width: 1025px) {
+  .container {
+    width: 60%;
+  }
+
+  input[name="zip_code"] {
+    width: 30%;
+  }
+
+}
