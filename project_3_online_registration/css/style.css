@@ -132,6 +132,8 @@ select {
   font-weight: 400;
   line-height: 1.6;
   border: none;
+  font-size: 1em;
+  font-style: italic;
 }
 
 select:focus {
@@ -162,7 +164,8 @@ input[name="zip_code"] {
 
 /* radio input */
 
-.radio {
+.radio,
+.checkbox {
   position: relative;
 }
 
@@ -212,10 +215,6 @@ input:checked + .side-label::after {
 
 /* checkbox input */
 
-.checkbox {
-  position: relative;
-}
-
 input[type="checkbox"] + label::before {
   content: '\f096'; /* square outline*/
   display: block;
@@ -231,6 +230,10 @@ input[type="checkbox"]:checked + label::before {
 
 input[type="checkbox"] + label {
   padding-left: 2em;
+  position: relative;
+  margin: 10px 0;
+  /*padding-left: 30px;*/
+  cursor: pointer;
 }
 
 /* text area */
@@ -315,4 +318,23 @@ footer {
     width: 30%;
   }
 
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  label {
+    display: inline-block;
+  }
+
+  label {
+    width: 30%;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select {
+    width: 60%;
+    vertical-align: left;
+  }
 }
