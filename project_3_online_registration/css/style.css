@@ -112,7 +112,7 @@ textarea {
   background-color: #eff0f1;
   border-radius: 5px;
   font-weight: 300;
-  appearance: none;
+  /*appearance: none;*/
 }
 
 label {
@@ -335,6 +335,5 @@ footer {
   input[type="number"],
   select {
     width: 60%;
-    vertical-align: left;
   }
 }
