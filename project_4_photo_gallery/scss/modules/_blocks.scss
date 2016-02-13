@@ -1,0 +1,26 @@
+/***********************************************************
+*** Img
+***********************************************************/
+
+a {
+  display: inline-block;
+  padding: 30px;
+}
+
+img {
+  width: 180px;
+  height: 180px
+}
+
+.photos {
+  a:first-of-type,
+  a:nth-of-type(4n+1) {
+  padding-left: 0;
+  }
+
+  a:nth-of-type(4n+4) {
+    padding-right: 0;
+  }
+
+
+}

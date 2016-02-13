@@ -1,0 +1,68 @@
+// ==========================================================================
+// = Global Variables
+// ==========================================================================
+
+// Color Scheme
+// examples based on the official Sass styleguide
+// =============
+
+// Descriptive colors:
+
+$gray       : #7f7f7f;
+$mercury    : #e5e5e5;
+$mine-shaft : #3C3C3C;
+
+$text-color   : $gray;
+$primary-color: $mine-shaft;
+
+// Base Sizes
+// ==========
+
+
+  // Base font size in used in _mixins.scss
+  // @type number
+ 
+
+$base-font-size               : 16;
+
+
+  // Base line-height in used in _mixins.scss
+  // @type number
+ 
+
+$base-line-height             : 24;
+
+
+// Font Stacks
+// ===========
+
+
+  // (optional) URL for Google Fonts import
+  // @type string
+ 
+
+$google-fonts-url          : 'https://fonts.googleapis.com/css?family=Playfair+Display:400,700';
+
+
+
+
+
+// Font Weights
+// ============
+
+$font-weight-light            : 300;
+$font-weight-normal           : 400;
+$font-weight-semibold         : 700;
+$font-weight-bold             : 900;
+
+
+// Breakpoints
+// There are no common breakpoints; examples based on the official Sass styleguide
+// ============
+
+$mobile-small                 : 240;
+$mobile-large                 : 320;
+$tablet-small                 : 480;
+$tablet-large                 : 768;
+$screen-small                 : 1024;
+$screen-large                 : 1280;
