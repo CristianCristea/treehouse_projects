@@ -12,7 +12,6 @@ $(function () {
                 // Show the list item if the phrase matches and increase the count by 1
             } else {
                 $("body").removeClass("overlaySearch").addClass("overlaySearch");
-                // $(this).show();
                 $(this).removeClass("notFoundItem").addClass("foundItem");
                 count++;
             }

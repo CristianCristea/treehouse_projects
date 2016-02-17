@@ -20,10 +20,6 @@ input[type="search"] {
   background: transparent;  
 }
 
-.filter-results-number {
-  display: block;
-}
-
 /***********************************************************
 *** lightbox
 ***********************************************************/
@@ -96,10 +92,11 @@ input[type="search"] {
 *** filter count
 ***********************************************************/
 
-.filter-results-number {
+.text-md {
   display: block;
   margin: 30px auto 0 auto;
   font-size: 2em;
   text-align: center;
   font-weight: 700;
+  color: $mercury;
 }
