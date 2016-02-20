@@ -1,0 +1,49 @@
+/***********************************************************
+*** Nav
+***********************************************************/
+
+nav {
+  ul {
+    list-style: none;
+  }
+
+  li {
+    background-color: $white;
+    margin-top: 10px;
+  }
+
+  a {
+   text-decoration: none;
+   color: $black;
+   font-size: 1.4em;
+   font-weight: $font-weight-bold;
+   padding: 10px 50px;
+   display: inline-block;
+   text-transform: uppercase;
+ 
+    &:hover {
+      color: $scooter;
+    }
+  } 
+}
+
+.nav-secondary,
+.nav-secondary ul,
+.nav-secondary li,
+.nav-secondary a {
+  display: inline-block;
+}
+
+.nav-primary {
+  margin-bottom: 3em;
+  padding-bottom: 2em;
+}
+
+.nav-secondary {
+
+  a {
+    font-size: 1em;
+    font-weight: $font-weight-bold;
+    padding: 0 0 0 30px;
+  }
+}

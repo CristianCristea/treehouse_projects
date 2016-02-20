@@ -1,0 +1,64 @@
+/*********************************************
+***** Footer
+*********************************************/
+
+footer {
+  background-color: $alabaster;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  .nav-secondary {
+    display: none;
+  }
+
+  .section-heading {
+    font-size: 1.2em;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .container{
+    position: relative;
+  }
+}
+
+address {
+  padding-bottom: 4em;
+  color: $gray;
+  font-size: 1.4em;
+  font-weight: $font-weight-normal;
+  line-height: 1.4;
+  font-style: normal;
+  
+  span {
+    font-weight: 700;
+    padding-left: 1em;
+  
+    a {
+      text-decoration: none;
+      color: $gray;
+    
+      &:hover {
+        text-decoration: none;
+        color: $gray;
+      }
+    }
+  }  
+}
+
+.back-to-top {
+  text-decoration: none;
+  color: $tundora;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: $font-weight-bold;
+  letter-spacing: -1px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -0.6em;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

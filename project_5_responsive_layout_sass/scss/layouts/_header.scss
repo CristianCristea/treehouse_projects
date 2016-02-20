@@ -1,0 +1,17 @@
+/*********************************************
+***** Header
+*********************************************/
+
+header {
+  text-align: center;
+  background-color: $alabaster;
+  
+  h1 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    font-size: 3em;
+    letter-spacing: -1px;
+    font-weight: $font-weight-semibold;
+  }
+}  

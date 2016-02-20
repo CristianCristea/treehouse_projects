@@ -1,0 +1,38 @@
+/*********************************************
+***** Typo
+*********************************************/
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6,
+nav a {
+  color: $tundora;
+}
+
+.section-heading {
+  font-size: 1.4em;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}
+
+.project-heading {
+  font-size: 1.6em;
+  font-weight: $font-weight-semibold;
+}
+
+p {
+  color: $tundora;
+  font-size: 1.2em;
+  font-weight: $font-weight-normal;
+  line-height: 1.4;
+}
+
+p.lead {
+  color: $gray;
+}

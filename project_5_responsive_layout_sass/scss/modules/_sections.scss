@@ -1,0 +1,110 @@
+/*********************************************
+***** Section about-me
+*********************************************/
+
+.about-me {
+  background-color: $alabaster;
+  text-align: center;
+  padding-bottom: 3em;
+
+  img {
+    border-radius: 5px;
+  }
+}
+
+
+/*********************************************
+***** Section portfolio
+*********************************************/
+
+.portfolio {
+  text-align: center;
+
+  .section-heading {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  .project-heading {
+    padding-top: 0;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    border: 3px solid transparent;
+    padding: 10px;
+    margin-bottom: 3em;
+  }
+}  
+
+
+/* hover */
+
+.project.marketing { 
+  a {
+    @include focus_hover_bc($scooter);
+  }
+}
+
+.project.calculator {
+
+  a{
+    @include focus_hover_bc($nevada);
+  }
+}
+
+.project.photo-gallery {
+
+  a{
+    @include focus_hover_bc($dolphin);
+  }
+}
+
+.project.favorite-spots {
+
+  a{
+    @include focus_hover_bc($fountain_blue);
+  }
+}
+
+.project.search {
+
+  a{
+    @include focus_hover_bc($golden_grass);
+  }
+}
+
+.project.travel-app {
+
+  a{
+    @include focus_hover_bc($matisse);
+  }
+}
+
+/*********************************************
+***** Section contact
+*********************************************/
+
+.contact {
+  text-align: center;
+  background-color: $alabaster;
+  padding-top: 4em;
+}
+
+
+/*********************************************
+***** Project Single Page
+*********************************************/
+
+.project-details {
+  text-align: center;
+}
+
+.project-single {
+  text-align: center;
+
+  .project-heading {
+    padding-top: 2em;
+  }
+}  
