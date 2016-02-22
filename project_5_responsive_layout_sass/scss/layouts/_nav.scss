@@ -13,13 +13,7 @@ nav {
   }
 
   a {
-   text-decoration: none;
-   color: $black;
-   font-size: 1.4em;
-   font-weight: $font-weight-bold;
-   padding: 10px 50px;
-   display: inline-block;
-   text-transform: uppercase;
+   @extend %primary-nav-link;
  
     &:hover {
       color: $scooter;
@@ -42,8 +36,6 @@ nav {
 .nav-secondary {
 
   a {
-    font-size: 1em;
-    font-weight: $font-weight-bold;
-    padding: 0 0 0 30px;
+    @extend %secondary-nav-link;
   }
 }

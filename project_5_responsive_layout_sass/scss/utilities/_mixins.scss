@@ -12,3 +12,28 @@
 /***********************************************************
 *** Placeholders
 ***********************************************************/
+
+%primary-nav-link {
+  text-decoration: none;
+  color: $black;
+  font-size: 1.4em;
+  font-weight: $font-weight-bold;
+  padding: 10px 50px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+%secondary-nav-link {
+  font-size: 1em;
+  font-weight: $font-weight-bold;
+  padding: 0 0 0 30px;
+}
+
+%main-heading {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  font-size: 3em;
+  letter-spacing: -1px;
+  font-weight: $font-weight-semibold;
+}
