@@ -1,0 +1,55 @@
+// ==========================================================================
+// = Global Variables
+// ==========================================================================
+
+// Color Scheme
+// =============
+
+// Descriptive colors:
+$boulder            : #777;
+$fire_bush          : #e59440;
+$orange_peel        : #ff9900;
+
+$primary-color      : $boulder;
+$secondary-color    : $fire_bush;
+$tertiary-color     : $orange_peel;
+
+// Base Sizes
+// ==========
+
+// Base font size in used in _mixins.scss
+// @type number
+ 
+$base-font-size               : 16;
+
+// Base line-height in used in _mixins.scss
+// @type number
+ 
+$base-line-height             : 24;
+
+// Font Stacks
+// ===========
+
+  // URL for Google Fonts import
+  // @type string
+ 
+$google-fonts-url          : 'https://fonts.googleapis.com/css?family=Lato:400,700,900';
+
+// Font Weights
+// ============
+
+$font-weight-light            : 300;
+$font-weight-normal           : 400;
+$font-weight-semibold         : 700;
+$font-weight-bold             : 900;
+
+// Breakpoints
+// There are no common breakpoints; examples based on the official Sass styleguide
+// ============
+
+$mobile-small                 : 240px;
+$mobile-large                 : 320px;
+$tablet-small                 : 480px;
+$tablet-large                 : 768px;
+$screen-small                 : 1024px;
+$screen-large                 : 1280px;
