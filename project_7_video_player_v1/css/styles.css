@@ -16,6 +16,17 @@
   clear: both; }
 
 /***********************************************************
+*** Animation
+***********************************************************/
+.show {
+  display: block !important;
+  transition: all .6s ease-out !important; }
+
+.hide {
+  display: none !important;
+  transition: all .6s ease-out !important; }
+
+/***********************************************************
 *** General
 ***********************************************************/
 * {
@@ -51,7 +62,7 @@ p.caption {
 ***********************************************************/
 .container {
   max-width: 1280px;
-  margin: 5px auto; }
+  margin: 0 auto; }
 
 /***********************************************************
 *** Main
@@ -62,7 +73,82 @@ main {
     padding-left: 1em;
     padding-right: 1em; }
 
+/***********************************************************
+*** Player
+***********************************************************/
+.player-container {
+  position: relative; }
+
+progress {
+  -webkit-appearance: none; }
+
+progress::-webkit-progress-bar {
+  background: white; }
+
+progress::-webkit-progress-value {
+  background: #ff9900; }
+
+progress::-moz-progress-bar {
+  background: #ff9900; }
+
+#button-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 10px; }
+  #button-bar > * {
+    float: left;
+    display: block; }
+  #button-bar .progress {
+    float: none;
+    display: block;
+    width: 99%;
+    margin: 0 auto;
+    padding-bottom: 3px; }
+  #button-bar #progress {
+    width: 100%;
+    height: 2px;
+    margin-bottom: 10px;
+    transition-property: margin;
+    transition-duration: .8; }
+  #button-bar button {
+    background: none;
+    border: none; }
+    #button-bar button:focus {
+      outline: none; }
+  #button-bar #wrapper {
+    width: 99%; }
+    #button-bar #wrapper #mute,
+    #button-bar #wrapper #fullscreen {
+      float: right;
+      padding-top: 5px;
+      padding-bottom: 5px; }
+    #button-bar #wrapper #fullscreen {
+      padding-right: 20px; }
+    #button-bar #wrapper #play {
+      padding-left: 20px; }
+
+/***********************************************************
+*** Hide default controls on fullscreen
+***********************************************************/
+video::-webkit-media-controls-enclosure {
+  display: none !important; }
+
+/***********************************************************
+*** Display custom controls on fullscreen
+***********************************************************/
+#button-bar {
+  z-index: 2147483647; }
+
+/***********************************************************
+*** caption
+***********************************************************/
 ::cue {
   color: red; }
+
+#video1:-webkit-full-screen {
+  width: 100%;
+  height: 100%; }
 
 /*# sourceMappingURL=styles.css.map */
