@@ -3,116 +3,171 @@
 ***********************************************************/
 main {
   background-color: white;
-
-  .caption {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
 }
 
 /***********************************************************
 *** Player
 ***********************************************************/
-.player-container {
-  position: relative;
-}
-
-progress {
-  -webkit-appearance: none;
-}
-
-progress::-webkit-progress-bar { background: white; }
-    progress::-webkit-progress-value { background: $tertiary-color; }
-    progress::-moz-progress-bar { background: $tertiary-color; }
-
-#button-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+video {
   width: 100%;
-  padding-bottom: 10px;
-
-  > * {
-    float: left;
-    display:block;
-  }
-
-  .progress {
-    float: none;
-    display: block;
-    width: 99%;
-    margin: 0 auto;
-    padding-bottom: 3px;
-  }
-
-  #progress {
-    width: 100%;
-    height: 2px;
-    margin-bottom: 10px;
-    transition-property: margin;
-    transition-duration: .8;
-  }
-
-  button {
-    background: none;
-    border: none;
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  #wrapper {
-    width: 99%;
-    
-    #mute,
-    #fullscreen {
-      float: right;
-      padding-top: 5px;
-      padding-bottom: 5px;
-    }
-
-    #fullscreen {
-      padding-right: 20px;
-    }
-
-    #play {
-      padding-left: 20px;
-    }
-  }
-
 }
 
-/***********************************************************
-*** Hide default controls on fullscreen
-***********************************************************/
+/* controls */
+.controls, .controls > * {
+  padding: 0;
+  margin: 0;
+}
+.controls {
+  overflow: hidden;
+  background: transparent;
+  width: 100%;
+  height: 7%; /* of figure's height */
+  position: relative;
+  bottom: 50px;
+}
+.controls[data-state=hidden] {
+  display: none;
+}
+.controls[data-state=visible] {
+  display: block;
+}
+.controls > * {
+  float:left;
+  width: 2.30625%;
+  margin-left: 10px;
+  display: block;
+}
+.controls > *:first-child {
+  margin-left: 0;
+}
+.controls > #mute {
+  margin-left: 80%;
+}
+.controls .progress {
+  cursor: pointer;
+  width: 100%;
+  margin: 0 auto 10px auto;
+}
+.controls button {
+  text-align:center;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  border:none;
+  cursor:pointer;
+  text-indent:-99999px;
+  background:transparent;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+.controls button:hover, .controls button:focus, .subtitles-menu li button:hover, .subtitles-menu li button:focus,
+.subtitles-menu li button[data-state="active"] {
+  opacity:0.7;
+}
 
-video::-webkit-media-controls-enclosure {
-  display:none !important;
+.controls button[data-state="play"] {
+  background-image: url(../img/icons/play-icon.png);
+}
+.controls button[data-state="pause"] {
+  background-image: url(../img/icons/pause-icon.png);
+}
+.controls button[data-state="stop"] {
+  background-image: url(../img/icons/restart-icon.png);
+}
+.controls button[data-state="mute"] {
+  background-image: url(../img/icons/volume-off-icon.png);  
+}
+.controls button[data-state="unmute"] {
+  background-image: url(../img/icons/volume-on-icon.png);  
+}
+.controls button[data-state="volup"] {
+  background-image: url(../img/icons/volume-up-icon.png);  
+}
+.controls button[data-state="voldown"] {
+  background-image: url(../img/icons/volume-down-icon.png);  
+}
+.controls button[data-state="go-fullscreen"] {
+  background-image: url(../img/icons/fullscreen-icon.png);  
+}
+.controls button[data-state="cancel-fullscreen"] {
+  background-image: url(../img/icons/fullscreen-icon.png);  
 }
 
 
-/***********************************************************
-*** Display custom controls on fullscreen
-***********************************************************/
-#button-bar {
+.controls progress {
+  display: block;
+  float: none;
+  width: 100%;
+  height: 2px;
+  margin-top: 2px;
+  margin-top: 0.125rem;
+  border: none;
+  overflow: hidden;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: $tertiary-color; /* Internet Explorer uses this value as the progress bar's value colour */
+}
+.controls progress[data-state="fake"] {
+  background: #e6e6e6;
+  height: 65%;
+}
+.controls progress span {
+  width: 0%;
+  height: 100%;
+  display: inline-block;
+  background-color: #2a84cd; 
+}
+.controls progress::-moz-progress-bar {
+  background-color: $tertiary-color;
+}
+/* Chrome requires its own rule for this, otherwise it ignores it */
+.controls progress::-webkit-progress-value {
+  background-color: $tertiary-color;
+}
+
+/* fullscreen */
+html:-ms-fullscreen {
+  width: 100%;
+}
+:-webkit-full-screen {
+  background-color: transparent;
+}
+video:-webkit-full-screen + .controls {
+  background: transparent; /* required for Chrome which doesn't heed the transparent value set above */
+}
+video:-webkit-full-screen + .controls progress {
+  margin-top: 0.5rem;
+}
+
+/* hide controls on fullscreen with WebKit */
+figure[data-fullscreen=true] video::-webkit-media-controls {
+  display: none !important;
+}
+figure[data-fullscreen=true] {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+}
+figure[data-fullscreen=true] video {
+  height:auto;
+}
+figure[data-fullscreen=true] figcaption {
+  display:none;
+}
+figure[data-fullscreen=true] .controls {
+  position:absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  width: 100%;
   z-index: 2147483647;
 }
-
-
-
-
-/***********************************************************
-*** caption
-***********************************************************/
-::cue {
-   color:red;
+figure[data-fullscreen=true] .controls li {
+  width: 5%;
 }
-
-// fulllscreen
-
-#video1:-webkit-full-screen {
+figure[data-fullscreen=true] .controls .progress {
   width: 100%;
-  height: 100%;
+  padding-bottom: 10px;
 }
-

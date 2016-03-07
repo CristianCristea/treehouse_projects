@@ -2,6 +2,52 @@
 ***** Tablet
 *********************************************/
 
-@media screen and (min-width: #{$tablet-large}) {
-
+/* Media Queries */
+@media screen and (max-width:1024px) {
+  figure {
+    padding-left: 0;
+    padding-right: 0;
+    height: auto;
+  }
+  .controls {
+    /* we want the buttons to be proportionally bigger, so give their parent a set height */
+    height: 30px;
+    height: 1.876rem;
+  }
+  .controls button[data-state="subtitles"] {
+    font-size: 0.6875rem;
+  }
+  .subtitles-menu {
+    right: 0;
+  }
+  .subtitles-menu li button {
+    font-size: 0.6875rem;
+  }
+}
+@media screen and (max-width:42.5em) {
+  .controls {
+    height: auto;
+  }
+  .controls > * {
+    display: block;
+    width: 14.5667%;
+    margin-left: 0;
+    height: 40px;
+    height: 2.5rem;
+    margin-top: 2.5rem;
+  }
+  .controls .progress {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    float: none;
+    margin-top: 0;
+  }
+  .controls .progress progress {
+    width: 98%;
+    margin: 0 auto;
+  }
+  .controls button {
+    background-position: center center;
+  }
 }
