@@ -1,5 +1,6 @@
 (function () {
   'use strict';
+
   /*********************************************
   ***** Support the video element?
   *********************************************/
@@ -57,14 +58,14 @@
         else video.muted = false;
       }
       changeButtonState('mute');
-    }
+    };
 
   /*********************************************
   ***** Alter the volume
   *********************************************/
     var alterVolume = function(dir) {
       checkVolume(dir);
-    }
+    };
 
   /*********************************************
   ***** Fullscreen
@@ -72,39 +73,38 @@
     var setFullscreenData = function(state) {
       videoContainer.setAttribute('data-fullscreen', !!state);
       fullscreen.setAttribute('data-state', !!state ? 'cancel-fullscreen' : 'go-fullscreen');
-    }
+    };
 
   /************************************************************
   ***** Checks if the document is currently in fullscreen mode
   ************************************************************/
     var isFullScreen = function() {
       return !!(document.fullScreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || document.fullscreenElement);
-    }
+    };
 
     var handleFullscreen = function() {
       if (isFullScreen()) {
-          if (document.exitFullscreen) document.exitFullscreen();
-          else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
-          else if (document.webkitCancelFullScreen) document.webkitCancelFullScreen();
-          else if (document.msExitFullscreen) document.msExitFullscreen();
-          setFullscreenData(false);
-        }
-        else {
-          if (videoContainer.requestFullscreen) videoContainer.requestFullscreen();
-          else if (videoContainer.mozRequestFullScreen) videoContainer.mozRequestFullScreen();
-          else if (videoContainer.webkitRequestFullScreen) {
-            video.webkitRequestFullScreen();
-          }
-          else if (videoContainer.msRequestFullscreen) videoContainer.msRequestFullscreen();
-          setFullscreenData(true);
-        }
+        if (document.exitFullscreen) document.exitFullscreen();
+        else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+        else if (document.webkitCancelFullScreen) document.webkitCancelFullScreen();
+        else if (document.msExitFullscreen) document.msExitFullscreen();
+        setFullscreenData(false);
       }
+      else {
+        if (videoContainer.requestFullscreen) videoContainer.requestFullscreen();
+        else if (videoContainer.mozRequestFullScreen) videoContainer.mozRequestFullScreen();
+        else if (videoContainer.webkitRequestFullScreen) {
+          video.webkitRequestFullScreen();
+        }
+        else if (videoContainer.msRequestFullscreen) videoContainer.msRequestFullscreen();
+        setFullscreenData(true);
+      }
+    };
 
     if (document.addEventListener) {
       video.addEventListener('loadedmetadata', function() {
         progress.setAttribute('max', video.duration);
       });
-
 
   /*********************************************
   ***** Changes the button state
@@ -178,9 +178,31 @@
   }
  }
 
- /******************************************
-Highlight Text from Video
-******************************************/
+  /******************************************
+  ***** Hide controls except Progress Bar
+  ******************************************/
+  var $buttonsToHide = $("button.hide");
+  var $videoContainer = $("#videoContainer");
+  var $controls = $(".controls");
+  var $dataFullscreenControls = $('figure[data-fullscreen="true"]').children('.controls');
+
+  $videoContainer.mouseenter(function () {
+    $buttonsToHide.fadeIn(400);
+    $controls.animate({
+    bottom: "50px"
+   }, 400);
+  });
+
+  $videoContainer.mouseleave(function () {
+    $buttonsToHide.fadeOut(400);
+    $controls.animate({
+    bottom: "20px"
+   }, 400);
+  });
+
+  /******************************************
+  ***** Highlight Text from Video
+  ******************************************/
   function intoSeconds(seconds, showHours) {
     if(showHours) {
         var hours = Math.floor(seconds / 3600),
@@ -196,7 +218,6 @@ Highlight Text from Video
     }
     return time;
   } 
-
 
   function secondsFromTimespan(timeSpan) {
     if(!timeSpan || !timeSpan.indexOf(':')) return 0;
@@ -231,7 +252,3 @@ Highlight Text from Video
     }
   });
 })();
-
-
-
-

@@ -283,7 +283,7 @@ figure[data-fullscreen=true] figcaption {
 figure[data-fullscreen=true] .controls {
   position: absolute;
   bottom: 0;
-  margin-bottom: 0;
+  margin-bottom: -50px !important;
   width: 100%;
   z-index: 2147483647; }
 
