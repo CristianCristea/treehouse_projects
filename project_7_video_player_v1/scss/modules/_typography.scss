@@ -4,3 +4,16 @@
 body {
   font-family: 'Lato', sans-serif;
 }
+
+.highlight {
+  color: $tertiary-color !important;
+}
+
+figcaption {
+  color: $primary-color;
+  text-align: center;
+  font-size: 1.2em;
+  background: white;
+  padding: 50px;
+  line-height: 1.6;
+}
