@@ -138,6 +138,7 @@
       checkVolume();
     }, false);    
     playpause.addEventListener('click', function(e) {
+      $(transcript).removeClass("highlight");
       if (video.paused || video.ended) video.play();
       else video.pause();
     }); 
@@ -172,6 +173,7 @@
     });
 
     progress.addEventListener('click', function(e) {
+      $(transcript).removeClass("highlight");
       var pos = (e.pageX  - (this.offsetLeft + this.offsetParent.offsetLeft + this.offsetParent.offsetParent.offsetLeft)) / this.offsetWidth;
       video.currentTime = pos * video.duration;
     });

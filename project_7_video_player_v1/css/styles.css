@@ -172,6 +172,9 @@ video {
 .controls > *:first-child {
   margin-left: 0; }
 
+.controls > #fs {
+  margin-right: 10px; }
+
 .controls .progress {
   cursor: pointer;
   width: 100%;
@@ -301,10 +304,11 @@ figure[data-fullscreen=true] .controls .progress {
 #duration {
   display: inline-block;
   color: #fff;
+  font-size: small;
   float: left;
-  width: 6.2%; }
+  width: 50px; }
 
-#current {
-  padding-left: 10px; }
+#duration {
+  margin-left: 0; }
 
 /*# sourceMappingURL=styles.css.map */
