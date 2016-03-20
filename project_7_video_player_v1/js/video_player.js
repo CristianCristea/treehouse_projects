@@ -6,7 +6,7 @@
   *********************************************/
   var supportsVideo = !!document.createElement('video').canPlayType;
 
-  if (supportsVideo) {
+  // if (supportsVideo) {
     var videoContainer = document.getElementById('videoContainer');
     var video = document.getElementById('video');
     var videoControls = document.getElementById('video-controls');
@@ -176,7 +176,7 @@
       video.currentTime = pos * video.duration;
     });
   }
- }
+ // }
 
   /******************************************
   ***** Hide controls except Progress Bar
@@ -217,7 +217,13 @@
         var time = minutes + ":" + seconds + " " + "/";
     }
     return time;
-  } 
+  }
+
+  var $video = $('#video');
+  $video.on("timeupdate", function () {
+    $('#current').html(intoSeconds($video[0].currentTime));
+    $('#duration').html(intoSeconds($video[0].duration));
+  });
 
   function secondsFromTimespan(timeSpan) {
     if(!timeSpan || !timeSpan.indexOf(':')) return 0;
@@ -228,6 +234,7 @@
   var transcript = $("span[data-start]");
   var i = 0;
   var time = intoSeconds(video.currentTime);
+
   $.each(transcript, function() {
     var start = $(transcript[i]).attr("data-start");
     var startNum = parseFloat(start);

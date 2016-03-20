@@ -37,12 +37,20 @@ video {
   margin-left: 10px;
   display: block;
 }
+
+#mute,
+#volinc,
+#voldec,
+#fs {
+  float: right; 
+}
+
 .controls > *:first-child {
   margin-left: 0;
 }
-.controls > #mute {
-  margin-left: 80%;
-}
+// .controls > #mute {
+//   margin-left: 66%;
+// }
 .controls .progress {
   cursor: pointer;
   width: 100%;
@@ -170,4 +178,17 @@ figure[data-fullscreen=true] .controls li {
 figure[data-fullscreen=true] .controls .progress {
   width: 100%;
   padding-bottom: 10px;
+}
+
+#current,
+#duration{
+  display: inline-block;
+  color: #fff;
+  // font-size: small;
+  float: left;
+  width: 6.2%;
+}
+
+#current{
+  padding-left: 10px;
 }

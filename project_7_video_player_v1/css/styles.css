@@ -163,11 +163,14 @@ video {
   margin-left: 10px;
   display: block; }
 
+#mute,
+#volinc,
+#voldec,
+#fs {
+  float: right; }
+
 .controls > *:first-child {
   margin-left: 0; }
-
-.controls > #mute {
-  margin-left: 80%; }
 
 .controls .progress {
   cursor: pointer;
@@ -200,10 +203,10 @@ video {
   background-image: url(../img/icons/restart-icon.png); }
 
 .controls button[data-state="mute"] {
-  background-image: url(../img/icons/volume-off-icon.png); }
+  background-image: url(../img/icons/volume-on-icon.png); }
 
 .controls button[data-state="unmute"] {
-  background-image: url(../img/icons/volume-on-icon.png); }
+  background-image: url(../img/icons/volume-off-icon.png); }
 
 .controls button[data-state="volup"] {
   background-image: url(../img/icons/volume-up-icon.png); }
@@ -293,5 +296,15 @@ figure[data-fullscreen=true] .controls li {
 figure[data-fullscreen=true] .controls .progress {
   width: 100%;
   padding-bottom: 10px; }
+
+#current,
+#duration {
+  display: inline-block;
+  color: #fff;
+  float: left;
+  width: 6.2%; }
+
+#current {
+  padding-left: 10px; }
 
 /*# sourceMappingURL=styles.css.map */
