@@ -75,10 +75,10 @@ video {
   background-image: url(../img/icons/restart-icon.png);
 }
 .controls button[data-state="mute"] {
-  background-image: url(../img/icons/volume-off-icon.png);  
+  background-image: url(../img/icons/volume-on-icon.png);  
 }
 .controls button[data-state="unmute"] {
-  background-image: url(../img/icons/volume-on-icon.png);  
+  background-image: url(../img/icons/volume-off-icon.png);  
 }
 .controls button[data-state="volup"] {
   background-image: url(../img/icons/volume-up-icon.png);  
