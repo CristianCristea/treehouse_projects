@@ -14,3 +14,17 @@ pre {
   height: 0%;
   padding: 10px;
 }
+
+table{
+  margin: 0 auto;
+  font-size: 1.2em;
+}
+
+table thead{
+  font-size: 1.4em;
+}
+
+table td,
+table th {
+  padding-left: 16px;
+}
