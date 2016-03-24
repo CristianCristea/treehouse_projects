@@ -13,6 +13,10 @@ body {
   background: #2d2b30;
 }
 
+.hide {
+  display: none;
+}
+
 /* Link Styles */
 
 a {
@@ -21,9 +25,10 @@ a {
   color: white;
 }
 
-/*a:hover {
-  color: #999;
-}*/
+a:hover {
+  /*color: #999;*/
+   color: #369069 !important;
+}
 
 /* Section Styles */
 
@@ -167,7 +172,7 @@ a.social {
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
-  opacity: .4;
+  opacity: .6;
   transition: all .5s;
 }
 
