@@ -48,7 +48,7 @@
                 <p>What is your favorite album:</p>
                 <select id="albums" name="select">
                   <option value="1">Party For An Angel</option>
-                  <option value="2">A Day Of Old</option>
+                  <option value="2" selected>A Day Of Old</option>
                   <option value="3">Finding My Shadow</option>
                   <option value="4">Diamond Fireworks</option>
                   <option value="5">Enjoy Your Desire</option>
@@ -97,5 +97,15 @@
       </ul>
       <p class="copyright">Copyright 2015, Accessible Frog</p>
     </footer>
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+      $(function(){
+        var sel = $('#albums');
+        var opts_list = sel.find('option');
+        opts_list.sort(function(a, b) { return $(a).text() > $(b).text() ? 1 : -1; });
+        sel.html('').append(opts_list);
+      });
+    </script>
   </body>
 </html>
