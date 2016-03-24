@@ -11,14 +11,14 @@
 
   <body>
     <div class="main-nav">
-      <ul class="nav">
+      <ul class="nav" role="menu">
         <li class="name"><a href="index.html">Accessible Frog</a></li>
         <li><a href="tour.html">Tour</a></li>
         <li><a href="#">Survey</a></li>
       </ul>
     </div>
 
-    <header>
+    <header role="banner">
       <h1 class="name">Accessible frog</h1>
       <h2>We make awesome music</h2>
     </header>
@@ -45,7 +45,7 @@
                 <input type="radio" name="res" value="Sally" id="name-four">
                 <label for="name-four">Sally</label>
 
-                <p>What is your favorite album:</p>
+                <label class="favorite" for="albums">What is your favorite album:</label>
                 <select id="albums" name="select">
                   <option value="1">Party For An Angel</option>
                   <option value="2" selected>A Day Of Old</option>
@@ -60,8 +60,8 @@
                   <option value="11">Street Of The Rider</option>
                 </select>
 
-                <p>What is your favorite song:</p>
-                <textarea rows="10"></textarea>
+                <label class="favorite" for="fav-song">What is your favorite song:</label>
+                <textarea rows="10" id="fav-song"></textarea>
               </fieldset>
             </form>
           </div>
@@ -76,11 +76,11 @@
                 <fieldset>
                   <legend>Sign Up</legend>
                   <label for="full-name">Name:</label>
-                  <input type ="text" name="full-name">
+                  <input type ="text" name="full-name" id="full-name">
                   <label for="email">Email:</label>
-                  <input type ="email" name="email">
+                  <input type ="email" name="email" id="email">
                   <label for="valid-email">Retype Email:</label>
-                  <input type ="email" name="valid-email">
+                  <input type ="email" name="valid-email" id="valid-email">
                   <button type="submit">Sign Up</button>
                 </fieldset>
             </form>
@@ -89,7 +89,7 @@
       </div>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
       <ul>
         <li><a href="#" class="social twitter"><img src= "img/twitter-32.png" alt="twitter logo"><span class="hide">Twitter logo</span></a></li>
         <li><a href="#" class="social youtube"><img src= "img/youtube-32.png" alt="youtube logo"><span class="hide">Youtube logo</span></a></li>
