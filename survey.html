@@ -30,29 +30,39 @@
           <img class="photo" src= "img/concert01.jpg" alt="Random photo from concert">
           <div class="container">
             <form class = "survey">
-              <p>Who is your favorite band member:</p>
-              <input type="radio" name="res" value="John"> John
-              <input type="radio" name="res" value="Hazzard"> Hazzard
-              <input type="radio" name="res" value="Bob"> Bob
-              <input type="radio" name="res" value="Sally"> Sally
+              <fieldset>
+                <legend>Survey</legend>
+                <p>Who is your favorite band member:</p>
+                <input type="radio" name="res" value="John" id="name-one">
+                <label for="name-one">John</label>
 
-              <p>What is your favorite album:</p>
-              <select id="albums" name="select">
-                <option value="1">Party For An Angel</option>
-                <option value="2">A Day Of Old</option>
-                <option value="3">Finding My Shadow</option>
-                <option value="4">Diamond Fireworks</option>
-                <option value="5">Enjoy Your Desire</option>
-                <option value="6">This Is For You</option>
-                <option value="7">Music Of My Life</option>
-                <option value="8">Song For Yesterday</option>
-                <option value="9">Heroic Forever</option>
-                <option value="10">Midnight Fires</option>
-                <option value="11">Street Of The Rider</option>
-              </select>
+                <input type="radio" name="res" value="Hazzard" id="name-two">
+                <label for="name-two">Hazzard</label>
 
-              <p>What is your favorite song:</p>
-              <textarea></textarea>
+                <input type="radio" name="res" value="Bob" id="name-three">
+                <label for="name-three">Bob</label>
+
+                <input type="radio" name="res" value="Sally" id="name-four">
+                <label for="name-four">Sally</label>
+
+                <p>What is your favorite album:</p>
+                <select id="albums" name="select">
+                  <option value="1">Party For An Angel</option>
+                  <option value="2">A Day Of Old</option>
+                  <option value="3">Finding My Shadow</option>
+                  <option value="4">Diamond Fireworks</option>
+                  <option value="5">Enjoy Your Desire</option>
+                  <option value="6">This Is For You</option>
+                  <option value="7">Music Of My Life</option>
+                  <option value="8">Song For Yesterday</option>
+                  <option value="9">Heroic Forever</option>
+                  <option value="10">Midnight Fires</option>
+                  <option value="11">Street Of The Rider</option>
+                </select>
+
+                <p>What is your favorite song:</p>
+                <textarea rows="10"></textarea>
+              </fieldset>
             </form>
           </div>
         </div>
@@ -61,14 +71,20 @@
       <div class="card">
         <div class="flex">
           <img class="photo" src= "img/the_band.jpg" alt="The band">
-            <div class="container">
-              <form class="newsletter">
-                  <p>Name: <input type ="text" name="textfield"></p>
-                  <p>Email: <input type ="email" name="textfield"></p>
-                  <p>Retype Email: <input type ="email" name="textfield"></p>
+          <div class="container">
+            <form class="newsletter">
+                <fieldset>
+                  <legend>Sign Up</legend>
+                  <label for="full-name">Name:</label>
+                  <input type ="text" name="full-name">
+                  <label for="email">Email:</label>
+                  <input type ="email" name="email">
+                  <label for="valid-email">Retype Email:</label>
+                  <input type ="email" name="valid-email">
                   <button type="submit">Sign Up</button>
-              </form>
-            </div>
+                </fieldset>
+            </form>
+          </div>
         </div>
       </div>
     </main>

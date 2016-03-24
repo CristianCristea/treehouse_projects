@@ -195,6 +195,18 @@ a.social:hover {
   clear: both;
 }
 
+
+/*form*/
+
+form input:focus,
+form textarea:focus {
+  outline-color: #369069;
+  border-color: #369069;
+  border-style: solid;
+  border-width: 2px;
+}
+
+
 /* Styles for larger screens */
 @media screen and (min-width: 840px) {
 

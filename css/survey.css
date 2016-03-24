@@ -8,21 +8,101 @@
 form {
   margin: 0 auto;
   text-align: left;
-  display: inline-block;
+  /*display: inline-block;*/
 }
 
 .container{
   text-align: center;
 }
-.newsletter{
+/*.newsletter{
   text-align: right;
 
+}*/
+
+/*form*/
+form {
+  width: 100%;
+  display: block;
 }
+
+form input,
+form label {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+  font-size: 1.2em;
+  color: #369069;
+  padding: 5px;
+}
+
+form button {
+  background: #369069;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  display: block;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+form button:hover {
+  border-color: white;
+}
+
+form.newsletter input {
+  margin-bottom: 1em;
+}
+
+form.survey {
+  text-align: center
+}
+
+form.survey p {
+  font-size: 1.3em;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: white;
+}
+
+form.survey label,
+form.survey input {
+  display: inline-block;
+  width: initial;
+}
+
+form.survey select,
+form.survey textarea {
+  width: 80%;
+  padding: 5px;
+  font-size: 1.2em;
+  color: #369096;
+  border-radius: 5px;
+    font-weight: 500;
+  line-height: 1.4;
+}
+
+form.survey select {
+  text-align: center;
+}
+
+/*form.survey textarea {
+
+}*/
 
 
 /* Styles for larger screens */
 @media screen and (min-width: 840px) {
   .photo{
     width: 40%;
+  }
+
+  form.newsletter {
+    margin-top: 1.2em;
+  }
+
+  .flex .container {
+    flex-grow: 2;
   }
 }
