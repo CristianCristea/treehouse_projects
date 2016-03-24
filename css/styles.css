@@ -66,7 +66,7 @@ a {
 
 header {
   text-align: center;
-  background: url('../img/concert02b_with_text.jpg') no-repeat top center ;
+  background: url('../img/concert02_no_text.jpg') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -84,8 +84,18 @@ header {
 }
 
 header .name{
-  font-size: 3em;
+  font-size: 4em;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #1d1d1f;
 }
+
+header h2 {
+  text-transform: lowercase;
+  font-size: 2em;
+  font-weight: 700;
+}
+
 .tagline {
   font-weight: 600;
   padding: 20px;
