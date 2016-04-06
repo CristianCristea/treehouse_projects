@@ -27,8 +27,12 @@
       <h1 class= "heading">Survey</h1>
       <div class="card">
         <div class="flex">
-          <img class="photo" src= "img/concert01.jpg" alt="Random photo from concert">
-          <div class="container">
+          <div class="survey-item">
+            <img class="photo" src= "img/concert01.jpg" alt="Random photo from concert">
+            <img class="photo" src= "img/the_band.jpg" alt="The band">
+          </div>
+
+          <div class="container survey-item">
             <form class = "survey">
               <fieldset>
                 <legend>Survey</legend>
@@ -63,30 +67,25 @@
                 <label class="favorite" for="fav-song">What is your favorite song:</label>
                 <textarea rows="10" id="fav-song"></textarea>
               </fieldset>
-            </form>
-          </div>
-        </div>
-      </div>
-      <h2 class= "heading">Newsletter</h2>
-      <div class="card">
-        <div class="flex">
-          <img class="photo" src= "img/the_band.jpg" alt="The band">
-          <div class="container">
-            <form class="newsletter">
+              
+              <h2 class= "heading">Newsletter</h2>
+
+              <div class="newsletter">
                 <fieldset>
                   <legend>Sign Up</legend>
                   <label for="full-name">Name:</label>
-                  <input type ="text" name="full-name" id="full-name">
+                  <input type ="text" name="full-name" id="full-name"><br>
                   <label for="email">Email:</label>
-                  <input type ="email" name="email" id="email">
+                  <input type ="email" name="email" id="email"><br>
                   <label for="valid-email">Retype Email:</label>
-                  <input type ="email" name="valid-email" id="valid-email">
+                  <input type ="email" name="valid-email" id="valid-email"><br>
                   <button type="submit">Sign Up</button>
                 </fieldset>
+              </div>
             </form>
           </div>
-        </div>
-      </div>
+        </div> <!-- .flex -->
+      </div>  <!-- .card -->
     </main>
 
     <footer role="contentinfo">

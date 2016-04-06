@@ -9,8 +9,8 @@ body {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   /*color: #3A6355;*/
-  color: #369069;
-  background: #2d2b30;
+  color: #5EB891;
+  background: #111;
 }
 
 .hide {
@@ -27,7 +27,7 @@ a {
 
 a:hover {
   /*color: #999;*/
-   color: #369069 !important;
+   color: #5EB891 !important;
 }
 
 /* Section Styles */
@@ -99,6 +99,7 @@ header h2 {
   text-transform: lowercase;
   font-size: 2em;
   font-weight: 700;
+  color: #1d1d1f;
 }
 
 .tagline {
@@ -113,7 +114,7 @@ header h2 {
   padding: 20px 40px 40px;
   text-align: left;
   /*border-top: 4px solid #781125;*/
-  border-top: 4px solid #369069;
+  border-top: 4px solid #5EB891;
   clear: both;
 }
 .card:hover {
@@ -200,8 +201,8 @@ a.social:hover {
 
 form input:focus,
 form textarea:focus {
-  outline-color: #369069;
-  border-color: #369069;
+  outline-color: #5EB891;
+  border-color: #5EB891;
   border-style: solid;
   border-width: 2px;
 }

@@ -31,12 +31,12 @@ form label {
   display: block;
   border-radius: 5px;
   font-size: 1.2em;
-  color: #369069;
+  color: #5EB891;
   padding: 5px;
 }
 
 form button {
-  background: #369069;
+  background: #5EB891;
   border: 2px solid transparent;
   border-radius: 5px;
   display: block;
@@ -51,7 +51,7 @@ form button:hover {
   border-color: white;
 }
 
-form.newsletter input {
+.newsletter input {
   margin-bottom: 1em;
 }
 
@@ -79,7 +79,7 @@ form.survey textarea {
   width: 80%;
   padding: 5px;
   font-size: 1.2em;
-  color: #369096;
+  color: #5EB891;
   border-radius: 5px;
   font-weight: 500;
   line-height: 1.4;
@@ -96,15 +96,21 @@ form.survey select {
 
 /* Styles for larger screens */
 @media screen and (min-width: 840px) {
-  .photo{
-    width: 40%;
+
+  .photo {
+    width: 80%;
   }
 
-  form.newsletter {
+  .newsletter {
     margin-top: 1.2em;
   }
+}
 
-  .flex .container {
-    flex-grow: 2;
-  }
+.survey-item {
+  flex: 1;
+}
+
+form.survey input[name="email"],
+form.survey input[name="full-name"] {
+  margin-left: 60px;
 }
