@@ -245,6 +245,7 @@ form textarea:focus {
 
   .photo{
     width: 30%;
+    height: initial;
     margin: 20px 30px;
   }
 
