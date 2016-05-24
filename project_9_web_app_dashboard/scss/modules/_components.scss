@@ -1,0 +1,422 @@
+/***********************************************************
+*** Social stats icons
+***********************************************************/
+
+.icon-twitter,
+.icon-facebook,
+.icon-google {
+  width: 5em;
+  height: 5em;
+  background-color: $primary-color;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+
+  svg {
+    width: 100%;
+    padding: 1.625em 1.375em 1.5em;
+
+    .social-icons {
+      fill: white;
+    }
+  }
+
+  #iconFacebook {
+    padding: 1.375em;
+  }
+}
+
+
+/***********************************************************
+*** Checkbox 
+***********************************************************/
+.cmn-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+
+.cmn-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  // user-select: none;
+}
+
+input.cmn-toggle-round-flat + label {
+  padding: 2px;
+  width: 80px;
+  height: 30px;
+  background-color: #dddddd;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+
+input.cmn-toggle-round-flat + label:before,
+input.cmn-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+input.cmn-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #fff;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+
+input.cmn-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 26px;
+  background-color: #dddddd;
+  border-radius: 26px;
+  transition: margin 0.4s, background 0.4s;
+}
+
+input.cmn-toggle-round-flat:checked + label {
+  background-color: $primary-color;
+}
+
+input.cmn-toggle-round-flat:checked + label:after {
+  margin-left: 46px;
+  background-color: $primary-color;
+}
+
+/***********************************************************
+*** Form message
+***********************************************************/
+
+.form-message {
+
+  .search-user input,
+  input,
+  textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 94%;
+    margin-bottom: 1.250em;
+    border: 2px solid $silver_chalice_a;
+    border-radius: 5px;
+  }
+
+  .search-user input[type="text"] {
+    font-size: 1em;
+    padding: 0.625em;
+    font-weight: $font-weight-light;
+    color: $primary-color;
+    
+    &:focus {
+      outline-color: $primary-color;
+      border-style: solid;
+      border-color: $primary-color;
+      outline-width: 2px;
+      outline-style: inherit;
+    }
+  }
+
+  textarea {
+    font-size: 1em;
+    padding: 0.625em;
+    color: $primary-color;
+    
+    &:focus {
+      outline-color: $primary-color;
+      border-style: solid;
+      border-color: $primary-color;
+      outline-width: 2px;
+      outline-style: inherit;
+    }
+  }
+}
+
+/***********************************************************
+*** Form settings
+***********************************************************/
+
+.form-settings {
+
+  .settings-option {
+    display: inline-block;
+    color: $dove_gray;
+    font-size: 1.2em;
+    font-weight: $font-weight-normal;
+  }
+
+  .switch {
+    display: inline-block;
+
+  @media screen and (min-width: 500px) {
+    margin-left: 6.250em;
+  }
+    #cmn-toggle-1 + label,
+    #cmn-toggle-2 + label{
+      margin-bottom: -0.625em;
+    }
+
+    #cmn-toggle-2 + label{
+      margin-left: 1.875em;
+    }
+  }
+
+  .form-settings-option {
+    display: block;
+    padding-bottom: 1.875em;
+  }
+  
+  
+}
+
+/***********************************************************
+*** select
+***********************************************************/
+
+/* remove standard-styles */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border:none;
+  border-radius: 0;
+  font-size: 1em;
+  width: 100%
+}
+
+/* hide browser-styling (arrow) in IE10 */
+select::-ms-expand {
+  display:none;
+}
+
+/* styling */
+select {
+  width:100%;
+  border: 1px solid #bbb;
+  padding:.75em 1em .5em 1em;
+  box-shadow: none;
+  background-color:white;
+  background-image:url(../img/basics-08-128.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  outline: none;
+  border-color: $silver_chalice_a;
+  border-radius: 5px;
+  color: $silver_chalice_a;
+  padding: 0.625em;
+  font-size: 1.125em;
+
+
+  &:hover,
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+option {
+  background:#fff;
+  border-top:1px solid $silver_chalice_a;
+  font-size: 1.125em;
+  color: $primary-color;
+  border-radius: 5px;
+  outline: none;
+}
+
+/***********************************************************
+*** Alert dropdown
+***********************************************************/
+
+.alert-dropdown-menu{
+  position: absolute;
+  top: 5em;
+  right: 1em;
+  border: 2px solid $secondary-color;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 39em;
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 10px 20px;
+      background-color: $secondary-color;
+      border-bottom: 2px solid $de_york;
+      font-size: .9em;
+      color: $white_color;
+
+      img{
+        display: block;
+        float: left;
+        margin-right: 10px;
+      }
+
+      span.member-profile {
+        display: inline-block;
+      }
+
+      span.comment-time {
+        display: inline-block;
+        padding-bottom: 1em;
+
+      }
+      
+      &:first-child {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: lighten($secondary-color, 10%);
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    font-size: .9em;
+    color: $white_color;
+  }
+
+  @media screen and (min-width: #{$tablet-large}) {
+    right: 9em;
+  }
+}
+
+/***********************************************************
+*** Modal
+***********************************************************/
+.modalwindow {
+    position:fixed;
+    display:none; /* Hides the modal window by default */
+    z-index:9999;
+    width:500px;
+    background: $primary-color;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+
+    h2 {
+      background-color: $secondary-color;
+      border-bottom: 1px solid $de_york;
+      padding: 15px;
+      font-size: 25px;
+      color: $white_color;
+      margin: 0;
+      text-align: center;
+  }
+
+  .content {
+    padding: 20px;
+    color: $white_color;
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .close {
+      float: right;
+      margin-top: -47px;
+      margin-right: 15px;
+      width: 17px;
+      height: 17px;
+      display: block;
+      padding: 10px;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: arial;
+  }
+}
+
+/***********************************************************
+*** Search bar typeahead plugin
+***********************************************************/
+
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 94%;
+  // height: 30px;
+  padding: 8px 12px;
+  font-size: 24px;
+  line-height: 30px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  outline: none;
+}
+
+.typeahead {
+  background-color: #fff;
+
+  &:focus {
+    border: 2px solid $primary-color;
+  }
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-menu {
+  width: 94%;
+  margin: 12px 0;
+  padding: 8px 0;
+  background-color: #fff;
+  color: #ccc;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 18px;
+  line-height: 24px;
+
+  .tt-cursor {
+    color: #fff;
+    background-color: $primary-color;
+  }
+
+  p {
+   margin: 0;    
+  }
+
+  &:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: $primary-color;  
+  }
+}
+
+span.twitter-typeahead {
+  width: 100%;
+}

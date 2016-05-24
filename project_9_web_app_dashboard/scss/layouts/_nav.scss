@@ -1,0 +1,82 @@
+/***********************************************************
+*** Main Nav
+***********************************************************/
+.display-sm-nav {
+  background-color: $secondary-color;
+  margin-top: 4.8em;
+  padding: 1em;
+  text-align: center;
+
+  .menu-btn {
+    background: none;
+    color: #fff;
+    font-size: 1.2em;
+    border: 0;
+    cursor: pointer;
+    outline-color: $de_york;
+
+    &:hover {
+      color: $de_york;
+    }
+  }
+}
+
+
+nav.main-nav { 
+  margin-top: 6.250em;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    box-sizing: initial;
+    width: 2em;
+    margin-top: 1em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    padding-left: 1.563em;
+    border-left: 3px solid transparent;
+  }
+  
+  li:first-child {
+    border-color: $de_york;
+  }
+
+  li:hover {
+    cursor: pointer;
+    border-color: $de_york;
+    transition: all .3s;
+  }
+}
+
+/***********************************************************
+*** Traffic nav
+***********************************************************/
+
+nav.traffic-nav {
+  
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      a{
+        text-decoration: none;
+        color: $dove_gray;
+        display: inline-block;
+        padding:  0.313em 0.750em;
+        font-size: .9em;
+        font-weight: $font-weight-semibold;
+
+        &:hover {
+          color: #fff;
+          border-radius: 10px;
+          background-color: $de_york;
+        } 
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+// ==========================================================================
+// Helper Classes
+// ==========================================================================
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none; 
+}
+
+.no-top-border {
+  border-top: none !important;
+}
+
+.img-round {
+  border-radius: 50%;
+}
+
+.active-nav {
+  margin-left: 0;
+}
+
+.active-main {
+  margin-left: 5.625em;
+}
+
+.p-t-1 {
+  padding-top: 1em !important;
+}
+
+.active {
+  background-color: $de_york;
+  color: $white_color !important;
+  border-radius: 10px;
+}

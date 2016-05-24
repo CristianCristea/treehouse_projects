@@ -1,0 +1,238 @@
+/***********************************************************
+*** General
+***********************************************************/
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/***********************************************************
+*** Main
+***********************************************************/
+
+main {
+  margin-top: 4.875em;
+  margin-left: 0;
+  transition: all .4s;
+
+  .main-heading {
+    text-align: center;
+    display: block;
+
+    @media screen and (min-width: #{$tablet-large}) {
+      margin-top: 4em;
+    }
+
+    @media screen and (min-width: #{$screen-small}) {
+      margin: 1.6em;
+      display: inline-block;
+    }
+  }
+}
+
+/***********************************************************
+*** Search
+***********************************************************/
+
+div.search {
+  display: block;
+  border-left: 1px solid $alto;
+  border-bottom: 1px solid $alto;
+  width: 100%;
+  position: relative;
+  background-color: $alabaster;
+
+  @media screen and (min-width: #{$screen-small}) {
+    display: inline-block;
+    width: 74%;  
+  }
+
+  @media screen and (min-width: #{$screen-small}) {
+    float: right;
+    margin-bottom: 1em;
+  }
+
+  @media screen and (min-width: #{$screen-large}) {
+      width: 80%;
+    }
+
+  input[type="search"] {
+    font-size: 1.1em;
+    padding: 0.625em;
+    border-style: solid;
+    border-color: $alto;
+    border-radius: 5px;
+    margin: 2em 18px 2em 2em;
+    width: 80%;
+    color: $primary-color;
+    float: right;
+
+    &:focus {
+      border-color: $primary-color;
+      outline-color: $primary-color;
+      outline-style: none;
+    }
+  }
+
+  i.fa-search {
+    position: absolute;
+    right: 1.6em;
+    font-size: 1.4em;
+    top: 2.1em;
+    color: $primary-color;
+  }
+}
+
+/***********************************************************
+*** Section Alert
+***********************************************************/
+
+section.alert {
+  max-width: 95%;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: $primary-color;
+  color: #fff;
+  margin-top: 2em;
+  // display: none;
+  position: relative;
+  text-align: center;
+  z-index: 1000;
+  
+  .alert-heading {
+    padding-right: 1.4em;
+    margin: 1em 0 1em 3em;
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    color: #fff;
+    font-size: .9em;
+    font-weight: $font-weight-bold;
+    margin: 1em;
+    border: none;
+    display: inline-block;
+  }
+}
+
+/***********************************************************
+*** Section traffic-chart
+***********************************************************/
+
+section.traffic-chart {
+  margin: 1.875em 3.125em;
+  display: none;
+
+  .block-heading {
+    display: block;
+    text-align: center;
+
+    @media screen and (min-width: #{$tablet-large}) {
+      text-align: left;
+    }
+
+    @media screen and (min-width: #{$screen-small}) {
+      padding-top: 1em;
+    }
+      
+  }
+  
+  nav.traffic-nav {
+    text-align: center;
+
+    @media screen and (min-width: #{$tablet-large}) {
+      float: right;
+    }      
+  }
+
+  @media screen and (min-width: 500px) {
+    display: block;
+  }
+}
+
+/***********************************************************
+*** Section traffic-data
+***********************************************************/
+
+section.traffic-data {
+  border-bottom: 1px solid $silver_chalice_a;
+  @media screen and (min-width: 500px) {
+    border-top: 1px solid $silver_chalice_a;
+  }
+}
+
+
+/***********************************************************
+*** Section social-stats
+***********************************************************/
+
+section.social-stats {
+  // border-top: 1px solid $silver_chalice_a;
+  border-bottom: 1px solid $silver_chalice_a;
+  padding-top: 1.875em;
+  padding-bottom: 3.125em;
+}
+
+
+/***********************************************************
+*** Section news
+***********************************************************/
+
+section.news {
+  border-bottom: 1px solid $silver_chalice_a;
+
+  .block-member-recent-activity {
+    position: relative;
+
+    .next-activity{
+      position: absolute;
+      top: 20%;
+      right: -30px;
+      font-size: 4em;
+      color: $primary-color;
+
+        &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+/***********************************************************
+*** Section Message and Settings
+***********************************************************/
+
+section.message-settings {
+  margin-bottom: 3.750em;
+
+  .block-heading {
+    padding-top: 1.875em;
+    padding-bottom: 1.875em;
+  }
+
+  .block-message-user {
+    padding-bottom: 3.750em;
+  }
+
+  .block-settings {
+    
+    form.form-settings {
+      .form-primary-button {
+        width: 49%;
+        margin-top: 7.9em;
+      }
+
+      input[type="submit"]{
+        float: left;
+      }
+      input[type="reset"] {
+        float: right;
+      }
+    }
+  }
+}

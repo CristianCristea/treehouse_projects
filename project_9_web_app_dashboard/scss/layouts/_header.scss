@@ -1,0 +1,81 @@
+/*********************************************
+***** Header
+*********************************************/
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  height: 4.875em;
+  background-color: $primary-color;
+  border-bottom: 1px solid $de_york;
+
+  .container {
+    position: relative;
+  }
+  
+  .logo {
+    float: left;
+    color: #fff;
+    font-size: 1.2em;
+    vertical-align: middle;
+    padding-left: 1.250em;
+
+    h4 {
+      font-weight: 400;
+    }
+
+    span {
+      font-weight: 900;
+    }
+  }
+
+  .alert-bell{
+    float: right;
+    margin-top: 1.250em;
+    margin-right: 1.2em;
+    padding: 0.313em 1.2em 0.313em 0;
+    border-right: 1px solid $secondary-color;
+    position:relative;
+
+    img {
+      height: 1.875em;
+    }
+
+    .msg-number {
+      font-size: .5em;
+      border-radius: 50%;
+      background-color: $de_york;
+      padding: 1px 4px;
+      color: #fff;
+      position: absolute;
+      top: -6px;
+      right: 20px;
+
+    }
+  }
+
+  .profile-header {
+    float: right;
+
+    .profile-name {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 1em;
+      color: #fff;
+      padding: 0 1.250em 1.625em 0.438em;
+      vertical-align: middle;
+      margin: 0;
+      display: none;
+    }
+
+    img {
+      border-radius: 50%;
+      height: 2.250em;
+      display: inline-block;
+      margin-top: 1.500em;
+
+    }
+  }
+}

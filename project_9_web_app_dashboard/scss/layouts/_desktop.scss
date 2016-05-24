@@ -1,0 +1,96 @@
+
+/*********************************************
+***** Desktop
+*********************************************/
+
+@media screen and (min-width: 500px) {
+  .daily-traffic .block-heading {
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: #{$screen-small}) {
+  .daily-traffic {
+    width: 49%;
+    display: inline-block;
+    border-right: 1px solid $silver_chalice_a;
+
+    .block-heading {
+      padding-top: 0;
+      margin-bottom: 2em;
+      text-align: left;
+    } 
+  }
+
+  .mobile-users {
+    width: 49%;
+    display: inline-block;
+
+    .block-heading {
+      text-align: left;
+    }
+  }
+
+  .social-stats {
+    
+    .block-heading {
+      text-align: left;
+    }
+  }
+
+  .block-social-stats {
+    margin: 0 1% 0 0;
+    display: inline-block;
+    text-align: left;
+    width: 29%;
+  }
+
+  .block-new-members {
+    float: left;
+    width: 50%;
+    border-right: 1px solid $silver_chalice_a;
+
+    .block-heading {
+      text-align: left;
+    }
+  }
+
+  .block-recent-activity {
+    width: 49%;
+    padding-top: 1.875em;
+    padding-left: 3.125em;
+    float:left;
+
+    .block-heading {
+      text-align: left;
+    }
+  }
+
+  .block-message-user {
+    width: 50%;
+    display: inline-block;
+    border-right: 1px solid $silver_chalice_a;
+
+    .block-heading {
+      text-align: left;
+    }
+  }
+
+  .block-settings {
+    width: 49%;
+    display: inline-block;
+    float: right;
+
+    .block-heading {
+      text-align: center;
+    }
+}
+
+
+}
+
+@media screen and (min-width: #{$screen-large}) {
+  .block-social-stats {
+    margin-right: 4%;
+  }
+}

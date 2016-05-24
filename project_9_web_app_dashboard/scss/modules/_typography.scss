@@ -1,0 +1,40 @@
+/***********************************************************
+*** Typography
+***********************************************************/
+
+body {
+  font-family: 'Lato, sans-serif';
+}
+
+.main-heading {
+  font-size: 1.8em;
+  font-weight: 400;
+  // line-height: 1.4;
+  color: $dove_gray;
+}
+
+.block-heading {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: $font-weight-light;
+  color: $dove_gray;
+}
+
+.alert-heading {
+  font-size: 1em;
+  font-weight: $font-weight-semibold;
+  text-transform: capitalize;
+}
+
+.social-heading {
+  color: $primary-color;
+  font-size: 1.4em;
+  font-weight: $font-weight-normal;
+  margin-bottom: 0.625em;
+}
+
+.number-followers {
+  color: $dove_gray;
+  font-size: 3em;
+  font-weight: $font-weight-light;
+}
