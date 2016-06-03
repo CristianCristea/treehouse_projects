@@ -1,0 +1,35 @@
+
+body {
+  font-family: $font-family-primary;
+}
+
+.headline-primary {
+  @extend %text-center;
+  @extend %headline-primary;
+}
+
+.headline-secondary {
+  @extend %text-center;
+  @extend %headline-secondary;
+}
+
+.headline-small {
+ @extend %headline-small;
+}
+
+p {
+  color: palette(gray, x-dark);
+  line-height: 1.6;
+  font-weight: $font-weight--normal;
+  font-size: em(16px);
+}
+
+.text-small {
+  font-size: em(14px);
+  font-weight: $font-weight--normal;
+  color: palette(grey, x-dark);
+}
+
+.bkg--primary {
+  @include add-background-color($coral);
+}

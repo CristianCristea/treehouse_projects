@@ -1,0 +1,89 @@
+/***********************************************************
+*** thumbnail
+***********************************************************/
+
+.thumbnail {
+
+  @include element(img) {
+    @extend %text-center;
+
+    img {
+      padding: 3px;
+    }
+  }
+
+  @include element(title) {
+    margin-top: .6em;
+    @extend %headline-secondary;
+    @extend %text-center;
+
+      @include modifier(small) {
+        margin-top: .6em;
+        @extend %headline-small;
+        @extend %text-center;
+      }
+
+  }
+
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.thumbnail-border {
+  border: 3px solid $secondary-color;
+  
+  @include element(img) {
+    padding: 3px;
+  }
+
+  @include element(title) {
+    @extend %headline-secondary;
+    @extend %text-center;
+
+    border-top: 3px solid $secondary-color;
+    padding-top: 1em;
+    // padding-bottom: 1em;
+    margin: 0;
+    margin-bottom: 1em; 
+  }
+
+  &:hover {
+    // border-color: $color-accent;
+    cursor: pointer;
+  }
+}
+
+/***********************************************************
+*** Pokemon list
+***********************************************************/
+
+.pokemon-list {
+
+  li {
+    @extend .btn-primary;
+    display: inline-block;
+    width: 90%;
+    margin: 2em;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    h3 {
+      font-weight: 600;
+      color: $white;
+      font-size: 1.6em;
+    }
+
+    @include media('medium') {
+      margin: 2em;
+      width: 40%;
+    }
+     @include media('large') {
+      margin: 1.65em;
+      width: 20%;
+    }
+  }
+}

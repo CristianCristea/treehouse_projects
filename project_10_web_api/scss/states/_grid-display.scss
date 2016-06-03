@@ -1,0 +1,17 @@
+// ================================================================
+// Grid display
+// ================================================================
+
+.is-displayed-mobile {
+  @include media(small) {
+    display: block;
+    @at-root (with: media) {
+      .is-hidden-mobile {
+  display: none;
+      }
+    }
+  }
+  @include media(medium) { 
+    display: none;
+  } 
+}

@@ -1,0 +1,60 @@
+// ============================================================
+// Helpers
+// ============================================================
+
+// Clearfix
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Screen reader text
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// Center alignment
+
+%text-center {
+  text-align: center;
+}
+
+// For pseudo-elements
+
+%pseudo {
+  display: block;
+  content: ''; 
+  position: absolute;
+}
+
+// Center elements
+
+.centered {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid palette(black);
+}
+
+.m-b-50 {
+  margin-bottom: em(50px);
+}

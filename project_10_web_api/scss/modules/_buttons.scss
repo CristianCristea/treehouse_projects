@@ -1,0 +1,13 @@
+/***********************************************************
+*** Btn
+***********************************************************/
+
+.btn-primary {
+  @extend %btn;
+  @extend %text-center;
+  @include add-background-color($primary-color);
+
+  &:after {
+    background-color: lighten($primary-color, 8%);
+  }
+}

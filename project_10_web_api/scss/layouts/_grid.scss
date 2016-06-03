@@ -1,0 +1,90 @@
+// =========================================================
+// .container .col-(1 to 12 or col-count) 
+// =========================================================
+
+* {
+  box-sizing: border-box;
+}
+
+//columns
+$col-width      : 65px;
+
+//gutter
+$gutter-width   : 20px;
+
+// col num
+$col-count      : 12;
+
+// container max width
+$cont-max-w     : 1050px;
+
+// set context width for the grid
+// calculate total cols width and total gutters width
+@function grid-context($col-width, $col-count, $gutter-width) {
+  $context: ($col-width * $col-count) + ($gutter-width * ($col-count - 1));
+  @return $context;
+};
+
+// calculate grid columns
+@media (min-width: 769px) {
+
+  @for $i from 1 through $col-count {
+    $context: grid-context($col-width, $col-count, $gutter-width) !global;
+    $target: ($col-width * $i) + ($gutter-width * ($i - 1));
+
+    // generate column modifier classes
+    // percentage() - Converts a unitless number to a percentage.
+    .col-#{$i} {
+      width: percentage($target / $context);
+    }
+  }
+}
+
+// mixin - apply a left margin to all but adiacent siblings
+@mixin doubly($margin: 1em) {
+  & + & {
+    margin-left: $margin;
+    @content;
+  }
+}
+
+// column styles
+[class*="col-"] {
+  @media (min-width: 1px) and (max-width: 768px) {
+    margin-top: em(12px);
+    margin-bottom: em(60px);
+  }
+
+  @media (min-width: 769px) {
+    @include doubly(percentage($gutter-width / $context));
+
+    float: left;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    &:last-of-type {
+      //float last col
+      float: right;
+    }
+  }
+}
+
+// grid container
+.container {
+  @extend %clearfix;
+  @extend .centered;
+
+  width: 90%;
+  max-width: 1100px;
+
+  // make nested grid container 100%;
+  // targed grid containers inside columns
+  [class*="col-"] > & {
+    width: 100%;
+  }
+
+  // set a max width for grid container
+  @media (min-width: 1100px) {
+    max-width: $cont-max-w;
+  }
+}

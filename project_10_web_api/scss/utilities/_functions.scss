@@ -1,0 +1,20 @@
+// ============================================================
+// Functions
+// ============================================================
+@function em($target, $context: $base-font-size) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context * 1em;
+}
+// use em(20px);
+
+@function px($target, $context: $base-font-size) {
+  @if $target == 0 { @return 0 }
+  @return $target * $context * 1px;
+}
+// use px(2em);
+
+// Call the color palette modifiers in color values
+
+@function palette($palette, $shade: 'base') {
+  @return map-get(map-get($color-palettes, $palette), $shade);
+}

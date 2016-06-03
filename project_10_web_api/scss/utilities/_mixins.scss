@@ -1,0 +1,93 @@
+// ============================================================
+// Mixins
+// ============================================================
+
+// BEM selectors
+
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// Media queries
+
+@mixin media($break) {
+  @if $break == "small" {
+    @media (min-width: $mobile-large) and (max-width: $tablet-large) {
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media (min-width: $tablet-large + 1) {
+      @content;
+    }
+  }
+  @else if $break == "large" {
+    @media (min-width: $screen-large) {
+      @content;
+    }
+  }
+  @else {
+    @error "No value could be retrieved for `#{$break}`. "
+  }
+}
+
+@mixin add-background-color($color) {
+  color: $white !important;
+  background-color: $color;
+}
+
+//=============================================================
+// Placeholders
+//=============================================================
+
+// Headlines
+
+%headline-primary {
+  // color: palette(black, light);
+  font-weight: $font-weight--normal;
+  font-size: em(42px);
+  line-height: (46px/42px);
+  margin-top: 0;
+}
+
+%headline-secondary {
+  color: palette(black, light);
+  font-weight: $font-weight--semibold;
+  font-size: em(24px);
+}
+
+%headline-small {
+  color: palette(black);
+  letter-spacing: $letter-space;
+  font-weight: $font-weight--normal;
+  font-size: em(16px);
+  text-transform: uppercase;
+}
+
+// Buttons
+
+%btn {
+  width: em(320px);
+  padding: 15px 30px;
+  border: 0;
+  border-radius : .4em;
+  color: $white;
+  text-transform: uppercase;
+  font-size : em(14px);
+  font-weight: $font-weight--normal;
+  transition: opacity .3s;
+  display: block;
+  &:hover {
+    opacity: .75;
+  }
+  &:active {
+    opacity: initial;
+  }
+}
